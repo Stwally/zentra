@@ -1,0 +1,129 @@
+/* Base layer — fonts and document defaults */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: Inter, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Safe area for notched phones */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.metric {
+  display: flex;
+  min-height: 7.5rem;
+  flex-direction: column;
+  border: 1px solid #222;
+  padding: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .metric {
+    min-height: 8.5rem;
+    padding: 1rem;
+  }
+}
+
+.metric--fill {
+  background: #111;
+}
+
+.metric h2 {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  color: #71717a;
+}
+
+@media (min-width: 640px) {
+  .metric h2 {
+    font-size: 1rem;
+  }
+}
+
+.metric__main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.metric__amount {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #fff;
+}
+
+@media (min-width: 640px) {
+  .metric__amount {
+    font-size: 1.5rem;
+  }
+}
+
+.metric__text {
+  font-size: 1.125rem;
+  line-height: 1.35;
+  color: #fff;
+}
+
+.metric__text strong {
+  display: block;
+  font-weight: 600;
+}
+
+.metric__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #d4d4d8;
+}
+
+@media (min-width: 640px) {
+  .metric__list {
+    font-size: 1rem;
+  }
+}
+
+.metric__foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.65rem;
+  color: #71717a;
+}
+
+@media (min-width: 640px) {
+  .metric__foot {
+    padding-top: 1rem;
+    font-size: 1rem;
+  }
+}
